@@ -27,7 +27,7 @@ bot.on('ready', () => {
 });
 
 bot.on('qr', qr => {
-    qrcode.generate(qr, { small: true });
+    qrcode.generate(qr, { small: false });
 });
 
 bot.on('message', async msg => {
