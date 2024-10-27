@@ -1,5 +1,7 @@
 const { Client, LocalAuth, MessageMedia } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
+const fs = require('fs');
+const path = require('path');
 const express = require('express')
 const app = express()
 const port = process.env.PORT || 4000;
@@ -10,7 +12,6 @@ app.get('/', (req, res) => {
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
-
 
 
 const bot = new Client({
@@ -38,7 +39,8 @@ bot.on('ready', () => {
 });
 
 bot.on('qr', qr => {
-    qrcode.generate(qr, { small: false });
+    qrcode.generate(qr, { small
+        : false });
 });
 
 bot.on('message', async msg => {
@@ -131,7 +133,9 @@ bot.on('message', async msg => {
                 etapaDadosFornecidosVisita = 1;
                 ultVisita = agora;
                 setTimeout(async () => {
-                    await msg.reply("Para solicitar a visita técnica, por favor informe seu *nome completo*.");
+                    await msg.reply("Para solicitar a visita técnica, 
+                        
+                        favor informe seu *nome completo*.");
                 }, 1000);
             }
 
