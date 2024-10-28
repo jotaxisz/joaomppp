@@ -2,15 +2,16 @@ const { Client, LocalAuth, MessageMedia } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 const fs = require('fs');
 const path = require('path');
+const express = require('express'); // Adiciona o express
+const app = express(); // Cria a aplicação express
+const port = 4000; // Define a porta diretamente como 4000
 
 const bot = new Client({
     authStrategy: new LocalAuth()
-    const express = require('express');
-const app = express();
-const port = process.env.PORT || 4000;
+});
 
-const bot = new Client({
-    authStrategy: new LocalAuth()
+app.listen(port, '0.0.0.0', () => {
+    console.log(`Bot is running and listening on port ${port}`);
 });
 
 const horaAbertura = 8;
