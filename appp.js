@@ -5,6 +5,12 @@ const path = require('path');
 
 const bot = new Client({
     authStrategy: new LocalAuth()
+    const express = require('express');
+const app = express();
+const port = process.env.PORT || 4000;
+
+const bot = new Client({
+    authStrategy: new LocalAuth()
 });
 
 const horaAbertura = 8;
