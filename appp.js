@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const express = require('express'); // Adiciona o express
 const app = express(); // Cria a aplicação express
-const port = 4000; // Define a porta diretamente como 4000
+const port = 5432; // Define a porta diretamente como 4000
 
 const bot = new Client({
     authStrategy: new LocalAuth()
